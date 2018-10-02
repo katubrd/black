@@ -1,0 +1,88 @@
+.description__container {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-family: $font-premiere;
+    color: $color-gray-dark;
+    position: sticky;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s ease-in-out;
+    &.fade-out {
+        opacity: 0;
+        visibility: hidden;
+    }
+    // animation: moveFromBottom 1s ease-in;
+    .heading {
+        z-index: 3;
+        font-family: $font-premiere;
+        font-weight: $font-premiere-bold;
+        font-size: 6rem;
+        animation: moveFromBottom .7s ease-in;
+        margin-bottom: 5rem;
+        @include mediaqueries(phone) {
+            font-size: 5rem;
+        }
+    }
+    .header__description {
+        z-index: 3;
+        width: 60%;
+        font-weight: $font-premiere-medium;
+        font-size: 1.5rem;
+        animation: moveFromBottom .7s ease-in;
+        margin-bottom: 2rem;
+    }
+    h4 {
+        z-index: 3;
+        font-weight: $font-premiere-bold;
+        font-size: 3rem;
+        animation: moveFromBottom .7s ease-in;
+        margin-bottom: 2rem;
+    }
+}
+
+.slide-anchor {
+    z-index: 3;
+    animation: moveFromBottom .7s ease-in;
+    color: $color-gray-dark;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    bottom: 7rem;
+    &:hover {
+        color: $color-gray-light;
+    }
+}
+
+.bcg-logo {
+    z-index: 1;
+    position: absolute;
+    width: 87%;
+    top: 10vh;
+    left: 60vw;
+    opacity: .3;
+    @include mediaqueries(tab-portret) {
+        width: 178%;
+        top: 18vh;
+        left: -31vw;
+        opacity: .1;
+    }
+    @include mediaqueries(tab-landscape) {
+        width: 178%;
+        top: 5vh;
+        left: -31vw;
+        opacity: .1;
+    }
+    @include mediaqueries(phone) {
+        width: 178%;
+        top: 18vh;
+        left: -33vw;
+        opacity: .1;
+    }
+}

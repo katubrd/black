@@ -1,0 +1,31 @@
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------SOCIAL SECTION STYLES----------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+.social {
+    height: 40vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    background: $color-white;
+    z-index: 5;
+    .logo-social {
+        text-align: center;
+        margin-bottom: 3rem;
+        img {
+            width: 41%;
+        }
+    }
+    .social-icons {
+        .social-icon {
+            color: $color-gray-dark;
+            padding: 1rem;
+            &:hover {
+                color: $color-gray-light;
+            }
+        }
+    }
+}

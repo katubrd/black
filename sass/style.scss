@@ -1,0 +1,80 @@
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------IMPORTS----------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,900');
+@import "variables";
+@import "mixins";
+@import "animations";
+@import "components/scroll-top";
+@import "typography";
+@import "components/social-section";
+@import "components/bkg-img";
+@import "components/header";
+@import "layouts/menu";
+@import "layouts/home";
+@import "layouts/about";
+@import "layouts/services";
+@import "layouts/work";
+@import "layouts/team";
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------GENERAL STYLES----------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    @include mediaqueries(tab-landscape) {
+        font-size: 56.25%;
+    }
+    @include mediaqueries(tab-portret) {
+        font-size: 50%;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------HEADER STYLES----------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+.header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    .logo {
+        .company {
+            position: absolute;
+            left: -100vw;
+        }
+        img {
+            width: 9rem;
+            height: auto;
+            position: absolute;
+            left: 3rem;
+            top: 3rem;
+        }
+    }
+}
+
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------CONTAINER STYLES----------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}

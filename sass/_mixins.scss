@@ -1,0 +1,35 @@
+@mixin easeOut {
+    transition: all .7s ease-out;
+}
+
+
+/*------------------------------------
+---------------MEDIA QUERIES----------
+--------------------------------------*/
+
+@mixin mediaqueries($breakpoint) {
+    @if $breakpoint==phone {
+        @media(max-width: 600px) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==tab-portret {
+        @media(max-width: 800px) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==tab-landscape {
+        @media(max-width: 1000px) {
+            @content
+        }
+        ;
+    }
+    @if $breakpoint==big-desktop {
+        @media(min-width: 1180px) {
+            @content
+        }
+        ;
+    }
+}

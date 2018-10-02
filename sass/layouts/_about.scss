@@ -1,0 +1,163 @@
+.facts {
+    height: 60vh;
+    @include mediaqueries(tab-portret) {
+        height: auto;
+        padding: 3rem;
+    }
+    .facts__cotainer {
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: center;
+        justify-content: space-between;
+        padding: 2rem;
+        @include mediaqueries(tab-portret) {
+            flex-flow: column nowrap;
+        }
+        .facts__item {
+            width: 25%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            font-family: $font-premiere;
+            color: $color-white;
+            text-align: center;
+            .number {
+                font-size: 11rem;
+                font-weight: $font-premiere-medium;
+                margin: 0;
+                @include mediaqueries(tab-landscape) {
+                    font-size: 8rem;
+                }
+                @include mediaqueries(tab-portret) {
+                    font-size: 7rem;
+                }
+                @include mediaqueries(phone) {
+                    font-size: 6rem;
+                }
+            }
+            &--description {
+                font-size: 2rem;
+                font-weight: $font-premiere-light;
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+.about__general {
+    width: 100%;
+    height: 100vh;
+    .philosophy__section {
+        height: 40%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        h4 {
+            margin-bottom: 2rem;
+        }
+    }
+    .skill__section {
+        background: $color-gray-light;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        .half__layout {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            @include mediaqueries(tab-landscape) {
+                flex-flow: column wrap;
+                justify-content: space-between;
+            }
+            &--container {
+                width: 48%;
+                h4 {
+                    text-align: left;
+                    margin-bottom: 1.5rem;
+                }
+                p {
+                    text-align: justify;
+                }
+                @include mediaqueries(tab-landscape) {
+                    width: 100%;
+                }
+            }
+            .wrapper {
+                width: 90%;
+                text-align: left;
+                h5 {
+                    margin-bottom: 1rem;
+                }
+                .line {
+                    width: 100%;
+                    height: 2rem;
+                    background: $color-white;
+                    position: relative;
+                    margin-bottom: 2rem;
+                    &__one {
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 2rem;
+                            background: $color-gray-dark;
+                            width: 80%;
+                        }
+                    }
+                    &__two {
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 2rem;
+                            background: $color-gray-dark;
+                            width: 60%;
+                        }
+                    }
+                    &__three {
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            height: 2rem;
+                            background: $color-gray-dark;
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.testimontial__container {
+    width: 100%;
+    height: 70vh;
+    background-image: url('../assets/img/about-bkg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    .slides {
+        position: relative;
+        height: 100%;
+        .slide {
+            position: absolute;
+            opacity: 0;
+            transition: opacity .5s ease-in;
+            font-family: $font-premiere;
+            font-size: 3rem;
+            font-weight: $font-premiere-medium;
+            color: $color-white;
+            top: 45%;
+            &.showing {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "black",
+  "version": "1.0.0",
+  "description": "simple website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katubrd/black.git"
+  },
+  "keywords": [
+    "clean",
+    "minimal",
+    "web"
+  ],
+  "author": "katubrd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katubrd/black/issues"
+  },
+  "homepage": "https://github.com/katubrd/black#readme",
+  "dependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

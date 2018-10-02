@@ -1,0 +1,76 @@
+.works {
+    .list__container {
+        height: 30vh;
+        .works__list {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 7rem;
+            @include mediaqueries(phone) {
+                top: 12rem;
+            }
+            &--item {
+                padding: 2rem;
+                cursor: pointer;
+                &:hover {
+                    color: $color-gray-medium;
+                }
+            }
+        }
+    }
+    .gallery__container {
+        height: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        .gallery__item {
+            width: 30rem;
+            height: 27rem;
+            position: relative;
+            display: flex;
+            flex-flow: row nowrap;
+            overflow: hidden;
+            cursor: pointer;
+            &--description {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: $color-white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include easeOut;
+                transform: translateX(-100%);
+            }
+            &--image {
+                width: 100%;
+                height: 100%;
+                transform: translateX(0);
+                @include easeOut;
+                img {
+                    width: 100%;
+                }
+            }
+            &:hover {
+                .gallery__item--description {
+                    transform: translateX(0);
+                }
+                .gallery__item--image {
+                    width: 110%;
+                    transform: translateX(200%);
+                }
+            }
+            @include mediaqueries(phone) {
+                width: 100%;
+                height: 40rem;
+            }
+        }
+        .hide {
+            display: none;
+        }
+    }
+}
